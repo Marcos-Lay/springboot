@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="RfidAlarm">
+    <select id="selectRfidAlarmList" resultType="RfidAlarm">
+        select
+        id,
+        sra.project_id projectId,
+        sra.tag_sno tagSno,
+        sra.tag_name tagName,
+        sra.tag_reader_sno tagReaderSno,
+        sra.tag_reader_name tagReaderName,
+        sra.alarm_type alarmType,
+        sra.record_time recordTime
+        from sl_rfid_alarm sra
+    </select>
+</mapper>
